@@ -1,73 +1,91 @@
 # Globa_Shop
+> Мини комментарии, чтоб не забыть эту залупу
+- [`Task`](#task)
 - [`Views`](#views)
-- ### Models
-- ### ViewModel
+- [`Models`](#models)
+- [`ViewModels`](#viewmodels)
 
+## Task
+### Создать десктоп-приложение для частичного управления маркетплейсом:
+Функционал:
+  - Общий:
+    1. Авторизация
+    2. Просмотр всех товаров
+  - Для обычных сотрудников/грузчиков/т.п.:
+    1. Изменение количества товаров
+    2. Просмотр количества заказов на их ПВЗ (в случае связи многие-ко-многим: на все ПВЗ, где работает этот сотрудник)
+  - Для администраторов:
+    1. Полное управление товарами: добавление/редактирование/удаление (нельзя удалять товары, которые находились в заказах за последние два месяца)
+    2. Просмотр всех ПВЗ с их общей статистикой и отдельной статистикой их сотрудников
 
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-ftttttttttttttttttttttttttttttfttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
-fttttttttttttttttttttttttttttt
+> На страницах просмотра большого кол-ва данных (товары и ПВЗ) предусмотреть кастомизацию запроса (сортировка, поиск, фильтрация) Обязательно использование WPF и паттерна MVVM. EF по желанию.
 
+Это задание рассчитано на несколько пар:
+* Неделя 1: View (прошло)
+* Неделя 2: Model (прошло)
+* Неделя 3: ViewModel Bindings (прошло)
+* Неделя 4: ViewModel Commands (походу тоже прошло 😶)
+* Неделя 5: Подключение БД
+  
 ## Views
+
+Все views - это UserControl
+
+* <b>Binding</b>
+  >  Делаем после создания [`ViewModels`](#viewmodels). </br>
+  
+  В XAML для нужных элементов вьюшки прописываем биндинг.
+   * Для TextBox к Text
+   * Для  Button к Command
+   * тд.
+<br>Пример конструкции:
+      ><Элемент  <i>`Свойство элемента`</i> = "{Binding <i>`свойство из модели`</i>}"  ... /><br>
+      > `ALT+ENTER` и там само добавится нужное<br>
+
+
+## Models
+
+* Папка Database:
+    Описываем сущности бд
+* Папка View:</br>
+  Описываем каждую вьюшку, все данные, которые с нее примем<br>
+  Для `RadioButton` будет одно bool свойство<br>
+  Для `ComboBox` два свойства:<br>
+  
+    1. `List<>` - список, что будет в нем отображаться
+    2. `string Selected` - выбранный элемент
+
+### ViewModels
+
+ Класс `ViewModelBase` от Глобы, - базовый класс для всех viewmodel
+ * Папка Command (предложенный код весь от Глобы)<br>
+ 
+     Класс `DefaultCommand` - заглушка, чтобы хотя бы сейчас работало<br>
+
+Во viewmodel-ях описываем такие же свойства, что и в соответственных моделях, но уже конкретизируем их поведение и незабываем про `OnPropertyChanged`.<br> Также прописываем свойство `ICommand`<br>
+И временно ставим заглушку. Например:<br>
+```
+    public LoginViewModel() { LoginCommand = new DefaultCommand();}
+ ```
+
+> !!! Не забыть  про модификаторы доступа (додумались же их не писать по дефолту😑 )<BR>
+<P></P>
+
+<b>!!! Временно для навигации</br></b>
+  Создаем пустое окно MainWindow. В его XAML между тэгами Grid прописываем < `название view, которую хотим показать` + `ALT + ENTER` и нужная штука создаcтся. Итог:
+  ```
+  <Grid>
+      <views:LoginView/>
+  </Grid>
+```
+> Если писать сразу как тэг, то нифига так не сработает
+
+> Чтобы два окна не открывалось в App.xaml надо убрать StartupUri
+    
+  
+
+
+
+
+
 
