@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="EvtifeevaShop.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:viewmodels="clr-namespace:EvtifeevaShop.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FF4E5770">
+        <Canvas Margin="220,80,237,100" Background="#FFCFD5E3">
+            <Button x:Name="btnSignin" Command="{Binding LoginCommand}" Content="Войти" Height="34" Width="122" Background="#FFDDE6FF" FontFamily="Yu Gothic UI Semilight"  HorizontalAlignment="Left" Canvas.Left="110" Canvas.Top="177" VerticalAlignment="Top"/>
+            <Label Content="Авторизация" FontFamily="Yu Gothic UI Semibold" FontSize="14" Height="26" Canvas.Left="114" Canvas.Top="10" Width="106" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Canvas.Left="80"  TextWrapping="Wrap" Text="{Binding Password }" Canvas.Top="123" Width="174" Height="24"/>
+        </Canvas>
+        <TextBox x:Name="tbUsername" Text="{Binding Login }" HorizontalAlignment="Left" Height="26" Margin="298,151,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" />
+
+        <Label x:Name="lbUsername" Content="Логин" HorizontalAlignment="Left" Margin="240,151,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPassword" Content="Пароль" HorizontalAlignment="Left" Margin="236,203,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.301,0.61"/>
+
+    </Grid>
+</UserControl>

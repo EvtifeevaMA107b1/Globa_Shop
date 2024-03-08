@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="EvtifeevaShop.Views.Admin.PickupPointsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EvtifeevaShop.Views.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFBABABA">
+        <DataGrid x:Name="dgPickupPoints" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,69,23,85" Height="296" RenderTransformOrigin="0.502,1.02"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="btnEmployee" Content="Статистика сотрудников ПВЗ" Margin="0,0,10,26" FontSize="11" RenderTransformOrigin="0.331,0.391" Width="172" Height="30" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <ComboBox x:Name="cbAddress" HorizontalAlignment="Left" Margin="9,14,0,0" VerticalAlignment="Top" Width="228" Height="22"/>
+        <RadioButton x:Name="rbUp" Content="Выше рейтинг" Margin="0,15,51,399" Width="158" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"/>
+        <RadioButton x:Name="rbDown" Content="Ниже рейтинг" Margin="0,36,51,0" Width="120" VerticalContentAlignment="Center" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5" Height="21" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>
