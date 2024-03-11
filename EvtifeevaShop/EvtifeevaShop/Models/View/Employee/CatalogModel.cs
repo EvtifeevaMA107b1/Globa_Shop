@@ -11,11 +11,11 @@ namespace EvtifeevaShop.Models.View
 {
     class CatalogModel
     {
-		//public DataTable<ProductTable> { get; set; }
+		public DataTable ProductTable { get; set; }
 	    public string Search {  get; set; }
 		public List<Seller> SellerList { get; set; }
 		public string Selected { get; set; }
-		public bool filterUp { get; set; }
+		public bool FilterUp { get; set; }
 
         
     }

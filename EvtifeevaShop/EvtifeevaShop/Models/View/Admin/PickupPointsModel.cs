@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EvtifeevaShop.Models.View.Admin
 {
-	public class PickupPointsModel
+	 class PickupPointsModel
 	{
 		public List<PickupPoints> PickupPointsList { get; set; }
 		public string SelectedAddress { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EvtifeevaShop.Models.View.Admin
 {
-   public class StatisticsEmployeeModel
+    class StatisticsEmployeeModel
     {
 		public DataTable EmployeeTable  {get;set;}
 		public List<Position> PositionList { get; set; }
