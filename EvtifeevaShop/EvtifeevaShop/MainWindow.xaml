@@ -9,6 +9,6 @@
     <Grid>
 
 
-        <employee:CatalogView></employee:CatalogView>
+        <employee:OrdersView></employee:OrdersView>
     </Grid>
 </Window>
