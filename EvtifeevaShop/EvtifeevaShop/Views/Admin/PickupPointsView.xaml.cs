@@ -25,6 +25,9 @@ namespace EvtifeevaShop.Views.Admin
             InitializeComponent();
         }
 
-	
-    }
+		private void cbAddress_SelectionChanged()
+		{
+
+		}
+	}
 }

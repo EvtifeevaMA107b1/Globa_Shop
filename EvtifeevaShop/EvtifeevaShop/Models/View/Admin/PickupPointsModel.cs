@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace EvtifeevaShop.Models.View.Admin
 {
-	class PickupPointModel
+	public class PickupPointsModel
 	{
 		public List<PickupPoints> PickupPointsList { get; set; }
 		public string SelectedAddress { get; set; }
 
 		public bool SortUp { get; set; }
-		//public DataTable<PickupPointsTable>{get; set;}
+		public DataTable PickupPointsTable {get; set;}
 	}
 }

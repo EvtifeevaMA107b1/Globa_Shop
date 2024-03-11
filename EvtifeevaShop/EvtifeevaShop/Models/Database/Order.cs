@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EvtifeevaShop.Models.Database
 {
-    class Order
+    public class Order
     {
         public int OrderId { get; set; }
 

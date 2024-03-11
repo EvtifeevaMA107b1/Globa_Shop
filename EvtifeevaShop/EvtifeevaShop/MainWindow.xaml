@@ -9,6 +9,6 @@
     <Grid>
 
 
-        <views:ProductsView></views:ProductsView>
+        <views:PickupPointsView></views:PickupPointsView>
     </Grid>
 </Window>
