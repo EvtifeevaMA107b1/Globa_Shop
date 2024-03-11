@@ -4,6 +4,7 @@ using EvtifeevaShop.Models.View.Admin;
 using EvtifeevaShop.ViewModels.Command;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,16 +34,44 @@ namespace EvtifeevaShop.ViewModels.Admin
 				OnPropertyChanged(nameof(Selected));
 			}
 		}
-
-
-
-
-	
-
-		public ICommand LoginCommand { get; set; }
-		public LoginViewModel()
+		public string Search
 		{
-			LoginCommand = new DefaultCommand();
+			get { return _ProductModel.Search; }
+			set
+			{
+				_ProductModel.Search = value;
+				OnPropertyChanged(nameof(Search));
+			}
+		}
+
+		public bool SortAsc
+		{
+			get { return _ProductModel.SortAsc; }
+			set
+			{
+				_ProductModel.SortAsc = value;
+				OnPropertyChanged(nameof(SortAsc));
+			}
+		}
+
+		public DataTable ProductTable
+		{
+			get { return _ProductModel.ProductTable; }
+			set
+			{
+				_ProductModel.ProductTable = value;
+				OnPropertyChanged(nameof(ProductTable));
+			}
+		}
+
+		public ICommand AddProductCommand { get; set; }
+		public ICommand ChangeCommand { get; set; }
+		public ICommand DeleteCommand { get; set; }
+		public ProductViewModel()
+		{
+			AddProductCommand = new DefaultCommand();
+			ChangeCommand = new DefaultCommand();
+			DeleteCommand = new DefaultCommand();
 		}
 	}
 }
