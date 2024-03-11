@@ -9,6 +9,6 @@
     <Grid>
 
 
-        <views:PickupPointsView></views:PickupPointsView>
+        <views:StatisticsEmployeeView></views:StatisticsEmployeeView>
     </Grid>
 </Window>

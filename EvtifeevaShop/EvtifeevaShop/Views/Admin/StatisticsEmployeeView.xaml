@@ -3,16 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EvtifeevaShop.Views.Admin"
+             xmlns:local="clr-namespace:EvtifeevaShop.Views.Admin" xmlns:admin="clr-namespace:EvtifeevaShop.ViewModels.Admin" d:DataContext="{d:DesignInstance Type=admin:StatisticsEmployeeViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFB8B8B8">
-        <ComboBox x:Name="cbPositions" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="dgEmployee" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,96,18,48"/>
-        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Margin="164,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="399" Height="22"/>
-        <RadioButton x:Name="rbSortDesc" Content="Я - А" HorizontalAlignment="Right" Margin="0,30,18,0" VerticalAlignment="Top" Height="25"/>
+        <ComboBox x:Name="cbPositions" ItemsSource="{Binding PositionList}" SelectedItem="{Binding Selected}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgEmployee" ItemsSource="{Binding EmployeeTable}" Margin="10,96,18,48"/>
+        <TextBox x:Name="tbSearch" Text="{Binding Search}" HorizontalAlignment="Left" Margin="164,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="399" Height="22"/>
+        <RadioButton x:Name="rbSortDesc" IsChecked="{Binding SortAsc}" Content="Я - А" HorizontalAlignment="Right" Margin="0,30,18,0" VerticalAlignment="Top" Height="25"/>
         <Label x:Name="lblPickupPoints" Content="Сотрудники с ПВЗ" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.38,0.41"/>
-        <RadioButton x:Name="rbSortAsc" Content=" А - Я" HorizontalAlignment="Right" Margin="0,10,15,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSortAsc" IsChecked="{Binding SortAsc}" Content=" А - Я" HorizontalAlignment="Right" Margin="0,10,15,0" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>
