@@ -10,7 +10,7 @@
         <ComboBox x:Name="cbFilters" ItemsSource="{Binding SellerList}" SelectedItem="{Binding Selected}" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="128"  Height="22"/>
         <TextBox x:Name="tbSearch" Text="{Binding Search}" HorizontalAlignment="Left" Margin="168,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="348" Height="22" />
         <RadioButton x:Name="rbFilterUp" IsChecked="{Binding SortAsc}" Content="Вверх" HorizontalAlignment="Left" Margin="660,18,0,0" VerticalAlignment="Top" Height="16" Width="78"/>
-        <RadioButton x:Name="rbFilterDown" IsChecked="{Binding SortAsc}" Content="Вниз" HorizontalAlignment="Right" Margin="0,17,10,0" VerticalAlignment="Top" Height="16" Width="58"/>
+        <RadioButton x:Name="rbFilterDown"  Content="Вниз" HorizontalAlignment="Right" Margin="0,17,10,0" VerticalAlignment="Top" Height="16" Width="58"/>
          <DataGrid ItemsSource="{Binding ProductTable}" Margin="151,82,39,53" Cursor="Hand"/>
         <Rectangle HorizontalAlignment="Left" Height="106" Margin="10,151,0,0" Stroke="Black" VerticalAlignment="Top" Width="105" Fill="#FFF3F3F3"/>
         <Button x:Name="btnAddProduct" Command="{Binding AddProductCommand}" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,39,26" VerticalAlignment="Bottom" Height="22" Width="73" Background="#FFD4E6D3"/>

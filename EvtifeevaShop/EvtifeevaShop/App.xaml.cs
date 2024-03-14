@@ -1,4 +1,5 @@
 ﻿using EvtifeevaShop.ViewModels;
+using EvtifeevaShop.ViewModels.Employee;
 using System.Configuration;
 using System.Data;
 using System.Windows;
@@ -13,7 +14,7 @@ namespace EvtifeevaShop
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			MainWindow mw = new()
-			{ DataContext = new LoginViewModel() };
+			{ DataContext = new CatalogViewModel() };
 
 			mw.Show();			
 			base.OnStartup(e);

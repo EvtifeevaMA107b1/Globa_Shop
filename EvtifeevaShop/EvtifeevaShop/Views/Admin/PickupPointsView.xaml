@@ -11,7 +11,7 @@
         <Button x:Name="btnEmployee" Command="{Binding PickupPointsCommand}" Content="Статистика сотрудников ПВЗ" Margin="0,0,10,26" FontSize="11" RenderTransformOrigin="0.331,0.391" Width="172" Height="30" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
         <ComboBox x:Name="cbAddress" ItemsSource="{Binding PickupPointsList}" SelectedItem="{Binding SelectedAddress}" HorizontalAlignment="Left" Margin="9,14,0,0" VerticalAlignment="Top" Width="228" Height="22" />
         <RadioButton x:Name="rbUp" IsChecked="{Binding SortUp}" Content="Выше рейтинг" Margin="0,28,28,0" Width="115" FlowDirection="RightToLeft" RenderTransformOrigin="0.533,0.883" HorizontalAlignment="Right" Height="18" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbDown" IsChecked="{Binding SortUp}" Content="Ниже рейтинг" Margin="0,25,143,0" Width="120" VerticalContentAlignment="Center" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5" Height="21" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbDown"  Content="Ниже рейтинг" Margin="0,25,143,0" Width="120" VerticalContentAlignment="Center" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5" Height="21" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>
